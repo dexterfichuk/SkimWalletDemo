@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.simplytapp.demo"
+        minSdkVersion 19
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+    buildTypes {
+        // Change "release" to "debug" for testing of the proguarded apk
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.google.android.gms:play-services-gcm:8.3.0'
+
+    compile 'com.nispok:snackbar:2.10.6'
+
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.5.0'
+
+    compile('oauth.signpost:signpost-commonshttp4:1.2.1.2') {
+        exclude module: 'httpcore'
+        exclude module: 'httpclient'
+    }
+
+    compile (getRepositoryUrl().empty ? ':virtualcard:+@aar' : 'com.simplytapp:virtualcard:2.22.12@aar') {
+        transitive = false
+    }
+
+    compile (getRepositoryUrl().empty ? ':virtualcard-common:+@jar' : 'com.simplytapp:virtualcard-common:2.22.12@jar') {
+        transitive = false
+    }
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Skim Wallet</string>
+
+    <string name="intro_message">
+        <![CDATA[
+
+
+                Demonstration of using SimplyTapp MobileSDK in \"Single\" or \"Multi\" card mode.
+                Switching between card modes is supported from the menu.  The default mode is \"Single\".
+
+
+        ]]>
+    </string>
+
+    <string name="title_activity_manage_cards">Manage Cards</string>
+    <string name="card_brand_label">Card brand</string>
+    <string name="card_number_label">Card number</string>
+    <string name="card_expiration_date_label">Expiration date</string>
+    <string name="card_title">Sample Card</string>
+    <string name="account_number">Account Number</string>
+    <string name="account_number_mask">XXXX XXXX XXXX %1$s</string>
+    <string name="expiration_date_label">Valid\nThru</string>
+
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_manage_cards">Manage cards</string>
+
+    <string name="api_url">https://www.mmilk.me</string>
+    <string name="log_tab_title">Past Purchases</string>
+    <string name="card_tab_title">Card</string>
+    <string name="card_status_activating">Activating…</string>
+    <string name="tap_and_pay_status_ready_to_tap">Ready to Tap</string>
+    <string name="tap_and_pay_status_unavailable">Finally Secure Tap &amp; Pay</string>
+    <string name="tap_and_pay_status_reason_default_card_not_set">No default card selected.</string>
+    <string name="cards_empty_text">No cards found</string>
+
+    <string name="card_transaction_end">Payment successful</string>
+    <string name="error.message.card.load.failure.on.tap">Payment failed, try again</string>
+
+    <string name="enter_pin_code">Enter Pin Code</string>
+    <string name="cancel_button_text">Cancel</string>
+    <string name="ok_button_text">OK</string>
+    <string name="set_default_button">Set default</string>
+
+    <string name="credentials_title">Credentials</string>
+    <string name="credentials_label">Copy/Paste valid credentials into the box below from \'Get App Credentials\' button in AdminApi Console (see sdk):</string>
+    <string name="credentials_hint_text">
+                    Consumer Key: 6H8S4MyXw7U81pB98pkxiT36YadslWpeKBQmGER2
+                    Consumer Secret: 4fd28rqVEkiDTVCbj69OF7AKs6xpecKLPF2T5qAX
+                    Access Token: EeO63ZfTuoAHqDJY34fyX2lpSy1rctynYg5kaOi3
+                    Token Secret: KzaMLZRTjpNcysE5psT5EDS9aBRQ6txGfsCQwcQr
+    </string>
+    <string name="credentials_format_error_message">Data is in wrong format, try again</string>
+    <string name="bad_device_error_message">Unregister wallet with AdminApi Console app - click \'Unregister App\' button…see sdk</string>
+
+    <!-- values used in aid_list.xml -->
+    <string name="serviceDescription">Skim Wallet Demo Service</string>
+    <string name="paymentGroup">Skim Wallet Demo Payment</string>
+
+    <string name="vc_apiBaseUrl">https://www.simplytapp.com/accounts/</string>
+
+    <string name="notification_content_info_string">Notification Content Info</string>
+    <string name="notification_content_title_string">Notification Content Title</string>
+    <string name="notification_content_text_string">Notification Content Text</string>
+
+</resources>

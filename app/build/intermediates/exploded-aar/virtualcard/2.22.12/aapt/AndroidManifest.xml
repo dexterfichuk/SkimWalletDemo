@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.simplytapp.virtualcard"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name=".permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
+    <application>
+
+        <!--
+            SimplyTapp required receiver & service for Google Cloud Messaging
+            These rely on Google Play Services and android support libraries
+        -->
+        <!-- [START gcm components] -->
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.simplytapp.virtualcard" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.simplytapp.virtualcard.VirtualCardGcmListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.simplytapp.virtualcard.VirtualCardInstanceIDListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.simplytapp.virtualcard.GcmRegistrationIntentService"
+            android:exported="false" />
+        <!-- [END gcm components] -->
+
+        <receiver android:name="com.simplytapp.virtualcard.WakeupAlarmTriggered" />
+
+        <service android:name="com.simplytapp.virtualcard.WakeupAlarmTriggeredIntentService" />
+
+        <receiver
+            android:name="com.simplytapp.virtualcard.ScheduleAlarmsOnBoot"
+            android:enabled="false"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.simplytapp.virtualcard.ScheduleAlarmsIntentService"
+            android:exported="false" />
+        <service
+            android:name="com.simplytapp.virtualcard.ApduService"
+            android:exported="true"
+            android:permission="android.permission.BIND_NFC_SERVICE" >
+            <intent-filter>
+                <action android:name="android.nfc.cardemulation.action.HOST_APDU_SERVICE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.cardemulation.host_apdu_service"
+                android:resource="@xml/aid_list" />
+        </service>
+    </application>
+
+</manifest>

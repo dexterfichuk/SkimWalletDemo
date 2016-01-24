@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/dexter/Downloads/MobileSdk/SimplyTappDemo/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/Users/dexter/Downloads/MobileSdk/SimplyTappDemo/app/src/main/res/menu/main.xml"
+    },
+    {
+        "merged": "/Users/dexter/Downloads/MobileSdk/SimplyTappDemo/app/build/intermediates/res/merged/debug/menu/manage_cards.xml",
+        "source": "/Users/dexter/Downloads/MobileSdk/SimplyTappDemo/app/src/main/res/menu/manage_cards.xml"
+    }
+]

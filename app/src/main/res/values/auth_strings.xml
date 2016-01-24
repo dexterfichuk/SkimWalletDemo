@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Default test account values-->
+
+    <!-- This is the app consumer key and secret from the portal's developer tab -->
+    <string name="consumer_key"></string>
+    <string name="consumer_secret"></string>
+
+    <!--
+         This is the wallet access token and secret.  One way to get these values is using the
+         AdminApiConsole:  http://wiki.simplytapp.com/home/using-admin-api-console
+     -->
+    <string name="access_token"></string>
+    <string name="token_secret"></string>
+
+</resources>

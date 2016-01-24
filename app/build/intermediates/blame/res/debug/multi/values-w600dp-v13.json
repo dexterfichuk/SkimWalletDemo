@@ -1,0 +1,102 @@
+[
+    {
+        "outputFile": "/Users/dexter/Downloads/MobileSdk/SimplyTappDemo/app/build/intermediates/res/merged/debug/values-w600dp-v13/values-w600dp-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 63,
+                    "endOffset": 114
+                },
+                "from": {
+                    "file": "/Users/dexter/Downloads/MobileSdk/SimplyTappDemo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-w600dp/values-w600dp.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 232,
+                        "endColumn": 63,
+                        "endOffset": 291
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 119,
+                    "endColumn": 50,
+                    "endOffset": 165
+                },
+                "from": {
+                    "file": "/Users/dexter/Downloads/MobileSdk/SimplyTappDemo/app/src/main/res/values-w600dp/dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 145,
+                        "endColumn": 50,
+                        "endOffset": 191
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 170,
+                    "endColumn": 46,
+                    "endOffset": 212
+                },
+                "from": {
+                    "file": "/Users/dexter/Downloads/MobileSdk/SimplyTappDemo/app/src/main/res/values-w600dp/dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 98,
+                        "endColumn": 46,
+                        "endOffset": 140
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 217,
+                    "endColumn": 42,
+                    "endOffset": 255
+                },
+                "from": {
+                    "file": "/Users/dexter/Downloads/MobileSdk/SimplyTappDemo/app/src/main/res/values-w600dp/dimens.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 42,
+                        "endOffset": 93
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 260,
+                    "endColumn": 54,
+                    "endOffset": 310
+                },
+                "from": {
+                    "file": "/Users/dexter/Downloads/MobileSdk/SimplyTappDemo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-w600dp/values-w600dp.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 296,
+                        "endColumn": 54,
+                        "endOffset": 346
+                    }
+                }
+            }
+        ]
+    }
+]

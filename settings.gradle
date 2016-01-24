@@ -1,0 +1,3 @@
+include ':app'
+//include ':virtualcard'
+//project(':virtualcard').projectDir = new File(settingsDir, '../../virtualcard')

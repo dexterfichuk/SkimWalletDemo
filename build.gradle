@@ -1,0 +1,38 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.5.0'
+    }
+}
+
+def getRepositoryUrl() {
+    return hasProperty('REPOSITORY_URL') ? REPOSITORY_URL : ''
+}
+
+def getRepositoryUsername() {
+    return hasProperty('REPOSITORY_USERNAME') ? REPOSITORY_USERNAME : ""
+}
+
+def getRepositoryPassword() {
+    return hasProperty('REPOSITORY_PASSWORD') ? REPOSITORY_PASSWORD : ""
+}
+
+subprojects {
+    repositories {
+        flatDir { dirs '../../sdk-libs' }
+
+        mavenLocal()
+
+        maven {
+            credentials {
+                username getRepositoryUsername()
+                password getRepositoryPassword()
+            }
+            url getRepositoryUrl()
+        }
+
+        jcenter()
+    }
+}
